@@ -1,9 +1,9 @@
 module.exports.config = {
 	name: "box",
-	version: "1.0.0",
+	version: "1.0.1",
 	hasPermssion: 0,
 	credits: "HungCho",
-    description: "Các cài đặt của nhóm chat.",
+        description: "Các cài đặt của nhóm chat.",
 	commandCategory: "Group",
 	usages: "",
 	cooldowns: 1,
@@ -11,12 +11,12 @@ module.exports.config = {
 };
 
 module.exports.run = async({api,event,args}) => {
-	var fs = require("fs-extra");
-	var request = require("request");
+    var fs = require("fs-extra");
+    var request = require("request");
     if (args[0] == "name") {
     var content = args.join(" ");
     var name = content.slice(4, 99) || event.messageReply.body;
-    api.setTitle(`${name} `, event.threadID);
+    api.setTitle(`${name}`, event.threadID);
    };
 	if (args[0] == "emoji") {
     var emoji = args[1] || event.messageReply.body;
