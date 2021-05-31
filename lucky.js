@@ -10,7 +10,7 @@ module.exports.config = {
     dependencies: [],
 };
 
-module.exports.run = async ({ event, api, Currencies, __GLOBAL,args }) => {
+module.exports.run = async ({ event, api, Currencies,args }) => {
  const getRandomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
 };
